@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Rating state - existing code -->
+      <div class="rating-state">
+        <div class="icon-oval">
+          <img src="./images/icon-star.svg" alt="orange star icon" />
+        </div>
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support <br />request. All
+          feedback is appreciated to help us <br />improve our offering!
+        </p>
+        <form id="rating-form">
+          <div class="ratings">
+            <div class="rating">
+              <input type="radio" name="rating" id="rating-1" value="1" />
+              <label for="rating-1">1</label>
+            </div>
+            <div class="rating">
+              <input type="radio" name="rating" id="rating-2" value="2" />
+              <label for="rating-2">2</label>
+            </div>
+            <div class="rating">
+              <input type="radio" name="rating" id="rating-3" value="3" />
+              <label for="rating-3">3</label>
+            </div>
+            <div class="rating">
+              <input type="radio" name="rating" id="rating-4" value="4" />
+              <label for="rating-4">4</label>
+            </div>
+            <div class="rating">
+              <input type="radio" name="rating" id="rating-5" value="5" />
+              <label for="rating-5">5</label>
+            </div>
+          </div>
+          <button type="submit" class="submit-button" id="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
+
+      <!-- Thank you state -->
+      <div class="thank-you-state hidden">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="thank you illustration"
+          class="thank-you-image"
+        />
+        <div class="rating-display">
+          You selected <span id="rating-value"></span> out of 5
+        </div>
+        <h2>Thank you!</h2>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

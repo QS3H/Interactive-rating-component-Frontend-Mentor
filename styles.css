@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary Colors */
+  --primary: hsl(217, 97%, 53%);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  /* Typography */
+  --font-family: "Overpass", sans-serif;
+  --font-size-paragraph: 15px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Layout Sizes */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  --primary-light: hsl(217, 97%, 73%);
+  --primary-dark: hsl(217, 97%, 33%);
+  --gradient-blue: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--primary-dark)
+  );
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  font-family: var(--font-family);
+}
+
+main {
+  background: var(--gradient-blue);
+  padding: 2rem;
+  border-radius: 30px;
+  height: 26rem;
+  width: 25.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-oval {
+  background-color: var(--primary-dark);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 1.8rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--light-grey);
+  line-height: 24px;
+}
+
+.ratings {
+  display: flex;
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--light-grey);
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.rating {
+  position: relative;
+}
+
+.rating input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.188rem;
+  height: 3.188rem;
+  border-radius: 50%;
+  background-color: var(--primary-dark);
+  transition: background-color 0.3s;
+}
+
+.rating:hover label {
+  background-color: var(--primary-light);
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.rating input[type="radio"]:checked + label {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.submit-button {
+  width: 100%;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 22.5px;
+  color: var(--very-dark-blue);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  padding: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: var(--white);
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you-state {
+  text-align: center;
+}
+
+.thank-you-image {
+  margin: 1rem 0 2rem;
+}
+
+.rating-display {
+  background-color: var(--primary-dark);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 22.5px;
+  width: fit-content;
+  margin: 0 auto 2rem;
+}
+
+.thank-you-state h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.thank-you-state p {
+  color: var(--light-grey);
+  font-size: var(--font-size-paragraph);
+  line-height: 1.5;
+}
