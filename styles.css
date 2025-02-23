@@ -177,3 +177,8 @@ p {
   font-size: var(--font-size-paragraph);
   line-height: 1.5;
 }
+
+.submit-button.error {
+  background-color: #ff4545;
+  color: white;
+}
