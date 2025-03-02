@@ -1,4 +1,3 @@
-// Get DOM elements
 const ratingForm = document.getElementById("rating-form");
 const ratingState = document.querySelector(".rating-state");
 const thankYouState = document.querySelector(".thank-you-state");
